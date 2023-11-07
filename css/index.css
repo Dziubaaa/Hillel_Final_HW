@@ -1,0 +1,43 @@
+@import url(./fonts.scss);
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montserrat-v26-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/montserrat-v26-latin-600.woff2") format("woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 91%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0 0 0;
+  background-color: lightgray;
+  font-family: "Montserrat", sans-serif;
+}
+.header .nav .menu__item {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  padding-left: 15px;
+}
+.header .nav .menu__item:hover {
+  color: #F0145A;
+  transition: 0.5s ease;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=index.css.map */
