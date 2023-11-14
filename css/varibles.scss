@@ -4,9 +4,13 @@ $bold: 700;
 
 
 //colors
+$link_color_regular: #24A3FF;
+$link_color_hover: #0085FF;
+$link_color_active: #006CCF; 
 $main_hover: #F0145A;
 $text_color: #fff;
-$gradient_text: linear-gradient(to right,  #EF8080 0%, #F0145A 100%);
+$gradient_text_left_to_right: linear-gradient(to right,  #EF8080 0%, #F0145A 100%);
+$gradient_text_right_to_left: linear-gradient(to left,  #EF8080 0%, #F0145A 100%);
 
 //hover_effects 
 $ease: .5s ease;

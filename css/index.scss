@@ -9,14 +9,14 @@
  
 //main
 @import "advantages.scss";
-
+@import "services.scss";
     
+
 
 .gradient {
     background: linear-gradient(45deg, #643E72 0%, #323264 40%, #323264 100%);
 }
-.main {
-    .hero {
+.hero {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -29,5 +29,4 @@
         }
         &__img {
         }
-    }
 }

@@ -1,13 +1,28 @@
 .advantages {
-    width: 90%;
+    width: 91%;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
     padding-top: 60px;
-    &__left {
-        padding-right: 60px;
+    @media screen and (max-width: 779px) {
+        flex-direction: column;
     }
-    &__right {
-        padding-left: 60px;
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-right: 60px;
+        @media screen and (max-width: 779px) {
+            display: flex;
+            flex-direction: row;
+            padding-bottom: 60px;
+            padding-left: 60px;
+        }
+    }
+    .item_color_gradient {
+        background: $gradient_text_left_to_right;
+        -webkit-background-clip: text;
+        color: transparent;
     }
     &__item {
         max-width: 375px;
@@ -16,13 +31,23 @@
         font-size: 2.375rem;
         color: #B3B3BA;
         cursor: pointer;
+        @media screen and (max-width: 779px) {
+            padding-right: 30px;
+        }
+    }
+    .one_line_text {
+        white-space: nowrap;
+    }
+    .item_hover{
         &:hover {
-            background: $gradient_text;
-            -webkit-background-clip: text;
-            color: transparent;
+            color: $main_hover;
             transition: $ease;
         }
     }
+    &__right {
+        padding-left: 60px;
+    }
+
     &__heading {
         font-family: $Montserat;
         font-size: 1.87rem;
@@ -42,4 +67,5 @@
 
 .divider {
     border: 4px solid #FFFFFF4D;
+    align-content: center;
 }

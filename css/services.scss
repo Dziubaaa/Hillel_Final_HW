@@ -1,0 +1,64 @@
+.question {
+    width: 91%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    &__link {
+        font-family: $Montserat;
+        font-weight: $bold;
+        font-size: 0.875rem;
+        color: $link_color_regular;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-decoration: none;
+        padding-bottom: 10px;
+        &::after{
+            content: url(../img/link_arrow.svg);
+        }
+        &:hover {
+            color: $link_color_hover;
+        }
+        &:active {
+            color: $link_color_active;
+        }
+    }
+    &__heading {
+        font-family: $Montserat;
+        font-weight: $bold;
+        font-size: 2.375rem;
+        background: $gradient_text_right_to_left;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+.cards {
+    width: 91%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    @media screen and (max-width: 769px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 376px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    &__item{
+
+    }    
+    &__img {
+        padding-bottom: 30px;
+    }
+    &__heading {
+        font-family: $Montserat;
+        font-weight: $bold;
+        font-size: 1.375rem;
+        color: $link_color_regular;
+        padding-bottom: 15px;
+    }
+    &__text{
+        font-family: $Montserat;
+        font-size: 1rem;
+        color: $text_color;
+    }
+}
