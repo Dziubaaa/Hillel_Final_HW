@@ -10,11 +10,39 @@
 //main
 @import "advantages.scss";
 @import "services.scss";
+@import "team.scss";
+@import "clients.scss";
     
 
 
 .gradient {
     background: linear-gradient(45deg, #643E72 0%, #323264 40%, #323264 100%);
+    border-radius: 0 0 12px 12px;
+    position: relative;
+    &::before {
+        content: '';
+        width: 97%;
+        background-color: #CACADB;
+        height: 10px;
+        border-radius: 0 0 12px 12px;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+    }
+    &::after {
+        content: '';
+        width: 94%;
+        background-color: #E7E7F2;
+        height: 20px;
+        border-radius: 0 0 12px 12px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -2;
+    }
+
 }
 .hero {
         display: flex;

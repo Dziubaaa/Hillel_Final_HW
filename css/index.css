@@ -132,7 +132,10 @@
     padding-left: 60px;
   }
 }
-.advantages .item_color_gradient {
+.advantages .item_color_gradient_to_right {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.375rem;
   background: linear-gradient(to right, #EF8080 0%, #F0145A 100%);
   -webkit-background-clip: text;
   color: transparent;
@@ -187,7 +190,17 @@
   padding-bottom: 60px;
   padding-top: 60px;
 }
-.question__link {
+
+.item_color_gradient_to_left {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.375rem;
+  background: linear-gradient(to left, #EF8080 0%, #F0145A 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.link {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
@@ -197,22 +210,11 @@
   text-decoration: none;
   padding-bottom: 10px;
 }
-.question__link::after {
-  content: url(../img/link_arrow.svg);
-}
-.question__link:hover {
+.link:hover {
   color: #0085FF;
 }
-.question__link:active {
+.link:active {
   color: #006CCF;
-}
-.question__heading {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 2.375rem;
-  background: linear-gradient(to left, #EF8080 0%, #F0145A 100%);
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 .cards {
@@ -221,6 +223,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (max-width: 769px) {
   .cards {
@@ -248,8 +251,146 @@
   color: #fff;
 }
 
+.team {
+  padding-top: 60px;
+  max-width: 91%;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.member {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 768px) {
+  .member {
+    flex-direction: column;
+  }
+}
+.member__img img {
+  border-radius: 12px 0 0 12px;
+}
+@media screen and (max-width: 768px) {
+  .member__img img {
+    border-radius: 12px 12px 0 0;
+  }
+}
+.member__quote {
+  padding: 5px 0 30px 0;
+}
+.member__info {
+  background-color: #F5F5FA;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 0 30px 30px;
+}
+
+.teammate {
+  font-family: "Montserrat", sans-serif;
+  color: #B3B3BA;
+}
+.teammate__name {
+  font-weight: 700;
+  font-size: 1rem;
+  padding-bottom: 6px;
+}
+.teammate__position {
+  font-size: 0.875rem;
+}
+
+.clients__heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  color: #323264;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.clients__grid {
+  max-width: 91%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (max-width: 1440px) {
+  .clients__grid {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .clients__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 375px) {
+  .clients__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.clients__item {
+  height: 120px;
+  text-align: center;
+}
+.clients .item_bg_color_blue {
+  background-color: #1C4280;
+}
+.clients .item_bg_color_green {
+  background-color: #143646;
+}
+.clients .item_bg_color_orange {
+  background-color: #F48B30;
+}
+.clients .item_bg_color_purple {
+  background-color: #9E4DC3;
+}
+.clients .item_bg_color_gray {
+  background-color: #E2E2E4;
+}
+.clients .item_bg_color_red {
+  background-color: #C71C36;
+}
+.clients .item_bg_color_light_blue {
+  background-color: #DCF3F9;
+}
+.clients .item_bg_color_deep_purple {
+  background-color: #282240;
+}
+.clients .item_bg_color_deep_blue {
+  background-color: #1D4568;
+}
+.clients .item_bg_color_black {
+  background-color: #000000;
+}
+
 .gradient {
   background: linear-gradient(45deg, #643E72 0%, #323264 40%, #323264 100%);
+  border-radius: 0 0 12px 12px;
+  position: relative;
+}
+.gradient::before {
+  content: "";
+  width: 97%;
+  background-color: #CACADB;
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.gradient::after {
+  content: "";
+  width: 94%;
+  background-color: #E7E7F2;
+  height: 20px;
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -2;
 }
 
 .hero {

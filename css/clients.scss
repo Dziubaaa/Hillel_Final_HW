@@ -1,0 +1,60 @@
+.clients {
+    &__heading {
+        font-family: $Montserat;
+        font-weight: 700;
+        font-size: 0.875rem;
+        letter-spacing: 1px;
+        color: #323264;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    &__grid {
+        max-width: 91%;
+        @media screen and (max-width: 1440px) {
+            max-width: 100%;
+        }
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and (max-width: 375px) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__item{
+        height: 120px;
+        text-align: center;
+    }
+    .item_bg_color_blue {
+        background-color: #1C4280;
+    }
+    .item_bg_color_green {
+        background-color: #143646;
+    }
+    .item_bg_color_orange {
+        background-color: #F48B30;
+    }
+    .item_bg_color_purple {
+        background-color: #9E4DC3;
+    }
+    .item_bg_color_gray {
+        background-color: #E2E2E4;
+    }
+    .item_bg_color_red {
+        background-color: #C71C36;
+    }
+    .item_bg_color_light_blue {
+        background-color: #DCF3F9;
+    }
+    .item_bg_color_deep_purple {
+        background-color: #282240;
+    }
+    .item_bg_color_deep_blue {
+        background-color: #1D4568;
+    }
+    .item_bg_color_black {
+        background-color: #000000;
+    }
+}

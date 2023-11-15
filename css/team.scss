@@ -1,0 +1,42 @@
+.team {
+    padding-top: 60px;
+    max-width: 91%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.member {
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+    &__img img {
+        border-radius: 12px 0 0 12px;
+        @media screen and (max-width: 768px) {
+            border-radius: 12px 12px 0 0;
+        }
+    }
+    &__quote {
+        padding: 5px 0 30px 0 ;
+    }
+    &__info {
+        background-color: #F5F5FA;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px 0 30px 30px;
+    }
+}
+.teammate {
+    font-family: $Montserat;
+    color: $gray_color;
+    &__name {
+        font-weight: $bold;
+        font-size: 1rem;
+        padding-bottom: 6px;
+    }
+    &__position {
+        font-size: 0.875rem;
+    }
+}

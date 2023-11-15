@@ -19,7 +19,10 @@
             padding-left: 60px;
         }
     }
-    .item_color_gradient {
+    .item_color_gradient_to_right {
+        font-family: $Montserat;
+        font-weight: $bold;
+        font-size: 2.375rem;
         background: $gradient_text_left_to_right;
         -webkit-background-clip: text;
         color: transparent;
