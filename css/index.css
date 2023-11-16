@@ -331,7 +331,9 @@
 }
 .clients__item {
   height: 120px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .clients .item_bg_color_blue {
   background-color: #1C4280;
@@ -362,6 +364,23 @@
 }
 .clients .item_bg_color_black {
   background-color: #000000;
+}
+.clients .border-left-up {
+  border-radius: 10px 0 0 0;
+}
+.clients .border-left-down {
+  border-radius: 0 0 0 10px;
+}
+.clients .border-right-up {
+  border-radius: 0 10px 0 0;
+}
+.clients .border-right-down {
+  border-radius: 0 0 10px 0;
+}
+@media screen and (max-width: 1440px) {
+  .clients {
+    border-radius: 0;
+  }
 }
 
 .gradient {
