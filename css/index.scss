@@ -12,8 +12,10 @@
 @import "services.scss";
 @import "team.scss";
 @import "clients.scss";
-    
+@import "publication.scss";
 
+//footer
+@import "footer.scss";
 
 .gradient {
     background: linear-gradient(45deg, #643E72 0%, #323264 40%, #323264 100%);

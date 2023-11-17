@@ -40,3 +40,25 @@
         font-size: 0.875rem;
     }
 }
+
+.circle_paginator{
+    padding-top: 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .circle{
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin-right: 15px;
+        background-color: $paginator_color;
+        &:active {
+            background-color: $link_color_active;
+        }
+        &:hover {
+            background-color: $link_color_hover;
+            transition: $ease;
+        }
+    }   
+}
