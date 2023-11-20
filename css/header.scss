@@ -1,4 +1,6 @@
 .header {
+    position: relative;
+    z-index: 1000;
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -6,18 +8,110 @@
     padding-top: 50px;
     font-family: $Montserat;
     &__logo {
+        display: flex;
         @media screen and (max-width: 779px) {
             display: none;
         }
     }
+    @media screen and (max-width: 375px) {
+        padding: 0; 
+        width: 100%;       
+    }
+    &__divider {
+        width: 6px;
+        height: 47px;
+        margin: 0 10px 0 15px;
+        background-color: #F0145A;
+        transform:skew(-20deg)
+    }
+    &__page-name{
+        font-family: $Montserat;
+        color: #FFFFFF;
+        font-size: 2rem;
+    }
     .wrapper {
         display: flex;
         flex-direction: column;
+        @media screen and (max-width: 375px) {
+            width: 100%;
+        }
         &__logo{
+            position: relative;
             display: none;
             @media screen and (max-width: 779px) {
                 display: block;
                 margin: 30px 0 30px 0;
+            }
+            @media screen and (max-width: 375px) {
+                display: flex;
+                justify-content: space-between;
+                margin: 15px 15px;
+                img {
+                    height: 32px;
+                }
+            }
+            .burger {
+                @media screen and (max-width:375px) {
+                    cursor: pointer;
+                    width: 32px;
+                    height: 32px;
+                    &__item{
+                        display: block;
+                        width: 18px;
+                        height: 2px;
+                        background-color: #FFFFFF;
+                        margin: 6px auto;
+                    }  
+                }
+            } 
+            .menu-mobile {
+                @media screen and (min-width:375px) {
+                    display: none;
+                }
+                border: 1px solid $main_hover;
+                border-radius: 10px;
+                position: absolute;
+                top: 5px;
+                right: 30px;
+                display: flex;
+                flex-direction: column;
+                .menu__item {
+                    padding: 10px;
+                }
+            }
+        }
+       &-mobile {
+            @media screen and (min-width: 375px){
+                display: none;
+            }
+            &__button {
+                border: none;
+                background: none;
+                font-family: $Montserat;
+                font-size: 0.85rem;
+                font-weight: $bold;
+                color: $text_color;
+                padding: 5px 7px;
+                &:hover {
+                    background-color: $main_hover;
+                    border-radius: 8px;
+                    transition: $ease;
+                }
+            }
+            &__number {
+                font-family: $Montserat;
+                font-weight: $bold;
+                text-decoration: none;
+                color: $text_color;
+            }
+            @media screen and (max-width: 375px) {
+                width: 100%;
+                background-color: #F5F5FA33;
+                padding: 10px 15px;  
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                 
             }
         }
         .nav {
@@ -41,9 +135,19 @@
                     border-radius: 8px;
                     transition: $ease;
                 }
+                @media screen and (max-width: 375px) {
+                    display: none;      
+                }
             }
             &__dot {
-                padding: 7px;
+                margin: 7px;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: #E6E6F0;
+                @media screen and (max-width: 375px) {
+                    display: none;        
+                }
             }
             &__location {
                 font-family: $Montserat;
@@ -51,20 +155,29 @@
                 font-weight: 400;
                 text-decoration: none;
                 color: $text_color;
+                @media screen and (max-width: 375px) {
+                    display: none;        
+                }
             }
             &__number {
                 font-family: $Montserat;
                 font-weight: $bold;
                 text-decoration: none;
                 color: $text_color;
+                @media screen and (max-width: 375px) {
+                    display: none;
+                }
             }
             &__facebook{
                 &:hover svg path {
                     fill:$main_hover;
                     transition: $ease;
                 }
+                @media screen and (max-width: 375px) {
+                    display: none;        
+                }
             }
-        } 
+        }
         .menu {
             &__item {
                 font-weight: $bold;
@@ -76,10 +189,17 @@
                     transition: $ease;
                     text-decoration: underline;
                 }
+                &:active {
+                    color: #F0145A;
+                }
             }
             @media screen and (max-width: 779px) {
                padding: 0 15px 0 0;
             }
+            @media screen and (max-width: 375px) {
+                display: none;
+            }
         }
     }
-    }
+}
+

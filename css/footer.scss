@@ -1,7 +1,7 @@
 .wrapper_footer {
     background-color: #F5F5FA;
+    padding-top: 30px;
 }
-
 .footer {
     font-family: $Montserat;
     max-width: 91%;
@@ -10,14 +10,25 @@
     &__divider {
         display: block;
         border-bottom: 2px solid #E6E6F0;
-        padding-top: 30px;
         margin-bottom: 30px;
     }
     &__adress {
         display: flex;
         justify-content: space-between;
         padding-bottom: 21px;
+        @media screen and (max-width:768px) {
+            justify-content: center;   
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            @media screen and (max-width:375px) {
+                display: block;
+            }
+        }
         .adress {
+            display: flex;
+            align-items: center;
             &__name {
                 color: #323264;
             }
@@ -32,26 +43,39 @@
                     color: $link_color_hover;
                     transition: $ease;
                 }
+                @media screen and (max-width:375px) {
+                    padding-top: 10px;  
+                    display: flex;
+                    justify-content: center;
+                }
             }
             &__copyrights {
                 color: #B3B3BA;
+                @media screen and (max-width:768px) {
+                    display: none;
+                }
             }
         }
-    }
-    .container {
-        display: flex;
-        align-items: center;
+        
     }
     .dot {
-        color: #818187;
+        border-radius: 50%;
+        background-color: #B3B3BA;
         width: 6px;
         height: 6px;
         margin: 0 10px;
+        @media screen and (max-width:375px) {
+            display: none;
+        }
     }
     
     &__contacts {
         display: flex;
         align-items: center;
+        @media screen and (max-width:768px) {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         .contact {
             &__social {
                 &:hover svg path {
@@ -63,6 +87,12 @@
                 font-weight: $bold;
                 text-decoration: none;
                 color: #46466E;
+                @media screen and (max-width:375px) {
+                    padding: 10px 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
             }
             &__email {
                 font-weight: $bold;
@@ -73,8 +103,19 @@
                     transition: $ease;
                 }
             }
+            
         }
     }
+    .copyrights {
+        padding-top: 30px;
+        display: none;
+        color: #B3B3BA;
+        @media screen and (max-width:768px) {
+            display: block;
+            text-align: center;
+        }
+    }
+    
 }
 
 

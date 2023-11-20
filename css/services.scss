@@ -1,8 +1,7 @@
 .question {
-    width: 91%;
+    width: 90%;
     margin: 0 auto;
-    padding-bottom: 60px;
-    padding-top: 60px;
+    padding: 60px 0;
 }
 .item_color_gradient_to_left {
         font-family: $Montserat;
@@ -38,18 +37,27 @@
     @media screen and (max-width: 769px) {
         grid-template-columns: repeat(2, 1fr);
     }
-    @media screen and (max-width: 376px) {
+    @media screen and (max-width: 410px) {
         grid-template-columns: repeat(1, 1fr);
     }  
     &__img {
         padding-bottom: 30px;
     }
-    &__heading {
+    &__heading{
         font-family: $Montserat;
         font-weight: $bold;
         font-size: 1.375rem;
-        color: $link_color_regular;
         padding-bottom: 15px;
+        a {
+            text-decoration: none;
+            color: $link_color_regular;
+        &:hover {
+            color: $link_color_hover;
+        }
+        &:active {
+            color: $link_color_active;
+        }
+        }
     }
     &__text{
         font-family: $Montserat;

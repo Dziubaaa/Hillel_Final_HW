@@ -7,6 +7,7 @@
         color: #323264;
         text-align: center;
         padding-bottom: 30px;
+        padding-top: 60px;
     }
     &__grid {
         border-radius: 12px;
@@ -24,6 +25,9 @@
         }
         @media screen and (max-width: 375px) {
             grid-template-columns: 1fr;
+            div:nth-child(n+7) {
+                display: none;
+            }
         }
     }
     &__item{

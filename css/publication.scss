@@ -1,5 +1,4 @@
 .wrapper_pub {
-    //width: 100%;
     background-color: #F5F5FA;
 }
 .publication {
@@ -13,12 +12,31 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 30px;
+    @media screen and (max-width:768px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 15px;
+        div:nth-child(3) {
+            grid-column: span 2;
+            grid-row: 3;
+        }
+    }
+    @media screen and (max-width:375px) {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 30px;
+        div:nth-child(3) {
+            grid-column: span 1;
+            grid-row: 3;
+        }
+    }
     &__item {
         background-color: #fff;
+       border-radius: 8px 8px 0 0;
+       overflow: hidden;
     }
     &__img {
         height: 200px;
         width: 100%;
+        object-fit: cover;
     }
     &__info {
         
