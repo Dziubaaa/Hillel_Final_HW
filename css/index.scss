@@ -18,10 +18,12 @@
 @import "footer.scss";
 
 //services
-@import "general_services";
+@import "general_services.scss";
 
 //form_page
 @import "form_page.scss";
+
+
 .gradient {
     background: linear-gradient(45deg, #643E72 0%, #323264 40%, #323264 100%);
     border-radius: 0 0 12px 12px;
@@ -69,19 +71,19 @@
             font-size: 2rem;
             font-weight: 700;
             position: absolute;
-            top: 280px;
+            top: 300px;
             z-index: 999;
             @media screen and (max-width: 779px) {
-                top: 170px;
+                top: 190px;
             }
             @media screen and (max-width: 500px) {
                 width: 50%;
-                left: 150px;
-                top: 50px;
+                right: 100px;
+                top: 80px;
             }
-            @media screen and (max-width: 500px) {
+            @media screen and (max-width: 375px) {
                 width: 50%;
-                left: 100px;
+                right: 80px;
                 top: 180px;
             }
         }
@@ -114,6 +116,9 @@
             height: calc(100vh - 114.5px);
             position: absolute;
             top: 700px;
+            @media screen and (max-width: 779px) {
+                top: 590px;
+            }
             @media screen and (max-width: 375px) {
                 top: 530px;
             }

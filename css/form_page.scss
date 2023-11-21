@@ -1,6 +1,283 @@
-.form-block {
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-    gap: 60px;
+//header 
+.text-color-blue {
+    color: #323264;
 }
+.nav-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    @media screen and (max-width: 779px) {
+        margin-bottom: 0;
+    }
+    &__button {
+        background: none;
+        border: none;
+        font-size: 0.85rem;
+        font-weight: $bold;
+        color: #B3B3BA;
+        padding: 5px 7px;
+        font-family: $Montserat;
+        &:hover {
+            background-color: $main_hover;
+            border-radius: 8px;
+            transition: $ease;
+        }
+        @media screen and (max-width: 375px) {
+            display: none;      
+        }
+    }
+    &__location {
+        font-family: $Montserat;
+        font-size: 1rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: #B3B3BA;
+        @media screen and (max-width: 375px) {
+            display: none;        
+        }
+    }
+    &__number {
+        font-family: $Montserat;
+        font-weight: $bold;
+        text-decoration: none;
+        color: #B3B3BA;
+        @media screen and (max-width: 375px) {
+            display: none;
+        }
+    }
+}
+.menu-contact {
+    &__item {
+        font-weight: $bold;
+        color: $link_color_regular;
+        text-decoration: none;
+        padding-right: 15px;
+        &:hover {
+            color: $main_hover;
+            transition: $ease;
+            text-decoration: underline;
+        }
+        &:active {
+            color: #F0145A;
+        }
+    }
+    @media screen and (max-width: 779px) {
+       padding: 0 15px 0 0;
+    }
+    @media screen and (max-width: 375px) {
+        display: none;
+    }
+}
+
+.wrapper-mobile-contact {
+    @media screen and (min-width: 375px){
+        display: none;
+    }
+    &__button {
+        border: none;
+        background: none;
+        font-family: $Montserat;
+        font-size: 0.85rem;
+        font-weight: $bold;
+        color: #B3B3BA;
+        padding: 5px 7px;
+        &:hover {
+            background-color: $main_hover;
+            border-radius: 8px;
+            transition: $ease;
+        }
+    }
+    &__number {
+        font-family: $Montserat;
+        font-weight: $bold;
+        text-decoration: none;
+        color: #B3B3BA;
+    }
+    @media screen and (max-width: 375px) {
+        width: 100%;
+        background-color: #F5F5FA;
+        padding: 10px 15px;  
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+         
+    }
+
+}       
+.burger-contact {
+    @media screen and (max-width:375px) {
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        &__item{
+            display: block;
+            width: 18px;
+            height: 2px;
+            background-color: #323264;
+            margin: 6px auto;
+        }  
+    }
+}
+
+.wrapper-contact__logo {
+    display: none;
+    @media screen and (max-width:779px) {
+        display: flex;
+        align-items: flex-start;
+        margin: 10px 0;
+    }
+    @media screen and (max-width:375px) {
+        width: 90%;
+        margin: 10px 15px 30px 15px;
+        display: flex;
+        align-items: flex-start;
+    }
+    .header-mobile {
+        &__divider {
+            width: 4px;
+            height: 26px;
+            margin: 0 5px 0 8px;
+            background-color: #F0145A;
+            transform:skew(-15deg)
+        }
+        &__page-name {
+            font-size: 1.25rem;
+        }
+    }
+}
+.menu-contact-mobile {
+    position: absolute;
+    right: 50px;
+    display: none;
+    border: 1px solid #F0145A;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    &__item {       
+        text-decoration: none;
+        padding: 5px 0;
+        font-weight: $bold;
+        color: $link_color_regular;
+        text-decoration: none;
+        &:hover {
+            color: $main_hover;
+            transition: $ease;
+            text-decoration: underline;
+        }
+        &:active {
+            color: #F0145A;
+        }
+
+    }
+}
+
+.form-block {
+    font-family: $Montserat;
+    width: 83%;
+    margin: 60px auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 60px; 
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+    }
+    &__contacts {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width:768px) {
+            width: 100%;
+        }
+    } 
+    &__adress, &__number{
+        text-decoration: none;
+        font-size: 1.3125rem;
+        color: #323264;
+    } 
+    &__email {
+        text-decoration: none;
+        font-size: 1.3125rem;
+        color: $link_color_regular;
+        margin-top: 15px;
+        &:hover {
+            color: $link_color_hover;
+            transition: $ease;
+        }
+    }
+    &__divider {
+        display: block;
+        margin: 30px 0;
+        width: 100%;
+        border: 2px solid #E6E6F0;
+    }
+    &__facebook {
+        display: flex;
+        align-items: center;
+    }
+    .facebook_hover_red:hover svg path{
+            fill:$main_hover;
+            transition: $ease;
+    }
+    &__link-text {
+        font-size: 0.75rem;
+        color: $link_color_regular;
+        font-weight: $bold;
+        text-transform: uppercase;
+        margin-left: 10px;
+        cursor: pointer;
+        &:hover {
+            color: $main_hover;
+            transition: $ease;
+        }
+    }
+}
+.form {
+    width: 50%;
+    background-color: #F5F5FA;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width:768px) {
+        width: 100%;
+    }
+    &__heading-one {
+        margin-bottom: 30px;
+        font-size: 1.875rem;
+        font-weight: $bold;
+        background: $gradient_text_right_to_left;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    &__input{
+        padding: 15px;
+        border-radius: 12px;
+        border: none;
+        margin-bottom: 15px;
+    }
+    input::placeholder, textarea::placeholder {
+        color: #B3B3BA;
+    }
+    &__headind-two {
+        margin: 15px 0;
+        font-size: 0.875rem;
+        color: #B3B3BA;
+        font-weight: $bold;
+        letter-spacing: 1px;
+    }
+    &__button {
+        font-family: $Montserat;
+        font-weight: $bold;
+        padding: 18px 0;
+        background-color: #24A3FF;
+        border: none;
+        color: #FFFFFF;
+        box-shadow: 0 0 20px #24A3FF80;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+}
+

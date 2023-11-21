@@ -37,7 +37,7 @@
                     <a class="wrapper-mobile__number" href="tel:+380800211927">0800 211 927</a>
                 </div>
                 <div class="wrapper__logo">
-                    <img src="./img/header-logo.svg" alt="hlegal_company_logo"> 
+                    <a href="./index.html"><img src="./img/header-logo.svg" alt="hlegal_company_logo"> </a>
                     <div class="menu-mobile" id="menu-mobile">
                         <a href="#" class="menu__item">about us</a>
                         <a href="./pages/services.html" class="menu__item">services</a>
@@ -88,7 +88,7 @@
                 </div>
             <section class="services">
                 <div class="question">
-                    <a class="link" href="#">services <img src="./img/link_arrow.svg" alt="arrow"></a>
+                    <a class="link" href="./pages/services.html">services <img src="./img/link_arrow.svg" alt="arrow"></a>
                     <h2 class="question__heading item_color_gradient_to_left">What can we do better than others?</h2>
                 </div>
                 <div class="cards">
@@ -229,14 +229,16 @@
             <div class="container">
                 <p class="adress__name">Kyiv, Mechnikova str, 14/1</p>
                 <span class="dot"></span>
-                <a class="adress__link" href="#">On Map</a>
+                <a class="adress__link" href="https://www.google.com/search?q=Kyiv%2C+Mechnikova+str%2C+14%2F1&oq=Kyiv%2C+Mechnikova+str%2C+14%2F1&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg70gEHODE0ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8" target="_blank">On Map</a>
             </div>
             <p class="adress__copyrights">© 2021 HLEGAL Law company, LLC</p>
         </div>
         <div class="footer__contacts contact">
-            <a class="contact__social" href="#"><svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a class="contact__social" href="https://www.facebook.com/?locale=uk_UA" target="_blank">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z" fill="#24A3FF"/>
-                </svg></a>
+                </svg>
+            </a>
                 <span class="dot"></span>
             <a class="contact__tel" href="tel:+0800 211 927">0800 211 927</a>
             <span class="dot"></span>
@@ -249,8 +251,8 @@
     </footer>
 </body>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const burgerMenu = document.getElementById('burger');
+   window.addEventListener('resize', function() {
+      var burgerMenu = document.getElementById('burger');
       const menu = document.getElementById('menu-mobile');
   
       burgerMenu.addEventListener('click', function() {
